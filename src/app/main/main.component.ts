@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup,FormControl,Validators } from '@angular/forms';
 
 @Component({
   selector: 'main',
@@ -21,11 +22,21 @@ export class MainComponent implements OnInit {
     brand:"Tesla",
     color:"silver"
   }
-    
+  
 ]
+infoCars = new FormGroup({
+  brand: new FormControl(''),
+  color: new FormControl(''),
+  img: new  FormControl('')
+});
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onSubmition(){
+    var b = this.infoCars.value;
+    this.cars.push(b);
+  }
 }

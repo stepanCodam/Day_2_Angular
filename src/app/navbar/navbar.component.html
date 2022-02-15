@@ -7,10 +7,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" routerLink="/contactus">Contact Us</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -28,7 +28,17 @@
                 <li class="nav-item">
 
                 </li>
-                <button class="btn btn-outline-success" (click)="donation()" type="submit">{{increase}} </button>
+                <div>
+
+                    <button class="btn btn-outline-success" (click)="donation()" type="submit">Donate 10 € </button>
+
+
+                    <button class="btn btn-outline-danger">{{increase}}</button>
+                    <ng-template [ngIf]="increase >= 200">
+                        <button class="btn btn-warning">VIP</button>
+                    </ng-template>
+
+                </div>
             </ul>
 
 

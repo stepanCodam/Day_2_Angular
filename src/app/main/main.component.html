@@ -8,3 +8,38 @@
         </div>
     </div>
 </div>
+
+<form [formGroup]="infoCars" (ngSubmit)="onSubmition()">
+
+    <label>
+      Brand:
+     <input type="text" formControlName="brand">
+
+    </label>
+
+
+
+    <label>
+  
+      Color
+  
+      <input type="text" formControlName="color">
+  
+    </label>
+
+
+
+    <label>
+  
+      Image
+  
+      <input type="text" formControlName="img">
+  
+    </label>
+
+
+
+
+
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>
